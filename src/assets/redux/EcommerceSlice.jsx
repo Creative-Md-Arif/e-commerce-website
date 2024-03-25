@@ -51,6 +51,17 @@ export const ecommerceSlice = createSlice({
             item.quantity--;
         }
        },
+       //------------------- User Start here----------
+
+       addUser : (state, action) => {
+        state.userInfo = action.payload;
+       },
+
+       removeUser: (state) => {
+        state.userInfo = null;
+       },
+
+       //-----------------------User end here---------
 
     },
 
@@ -63,5 +74,7 @@ export const {
                resetCart,
                increamentQuantity,
                decrementQuantity,
- } = ecommerceSlice.actions;
+               addUser,
+               removeUser,
+          } =  ecommerceSlice.actions;
 export default ecommerceSlice.reducer;

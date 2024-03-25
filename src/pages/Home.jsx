@@ -3,12 +3,6 @@ import Banner from "../components/Banner";
 import Products from "../components/Products";
 import { useEffect, useState } from "react";
 
-
-
-
-
-
-
 const Home = () => {
   const [products , setProducts] = useState([]);
   const data = useLoaderData();
@@ -16,13 +10,6 @@ const Home = () => {
   useEffect(()=>{
   setProducts(data.data);
   },[data]);
-
-
-
-
-
-
-
     return (
         <div>
           <Banner/>

@@ -15,7 +15,7 @@ const productData = useSelector((state) => state.ecommerce.productData);
     return (
         <div className=" w-2/3 pr-10">
          <div className="w-full">
-            <h2 className="font-titleFont text-2xl" >shoppin cart</h2>
+            <h2 className="font-titleFont text-2xl" >shopping cart</h2>
          </div>
          <div>
             {

@@ -4,12 +4,11 @@ import React from "react";
 import { cartImg, mainLogo } from "../assets";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import { ToastContainer , toast } from "react-toastify";
-
-
 
 const Header = () => {
   const productData = useSelector((state) => state.ecommerce.productData);
+  const userInfo = useSelector ((state) => state.ecommerce.userInfo);
+  console.log(userInfo);
   return (
     <div className="w-full h-20 shadow-inner bg-blue-200 sticky top-0 z-50">
       <div className="max-w-screen-xl h-full mx-auto flex items-center justify-between">
@@ -45,21 +44,23 @@ const Header = () => {
           </div>
 
         </Link>
-          <img className=" w-9 h-9 rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnfAxGV-fZxGL9elM_hQ2tp7skLeSwMyUiwo4lMm1zyA&s" alt="" />
+          <Link to="/login">
+          <img className=" w-9 h-9 rounded-full"
+           src={
+            userInfo
+            ? userInfo.image
+            : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnfAxGV-fZxGL9elM_hQ2tp7skLeSwMyUiwo4lMm1zyA&s"
+           } 
+           alt=""
+            />
+          </Link>
+          {
+            userInfo && <p className="text-base font-titleFont font-semibold underline underline-offset-2" >
+              {userInfo.name}
+              </p>
+          }
         </div>
       </div>
-      {/* <ToastContainer
-       position="top-left"
-       autoClose={2000}
-       hideProgressBar={false}
-       newestOnTop={false}
-       closeOnClick
-       rtl={false}
-       pauseOnFocusLoss
-       draggable
-       pauseOnHover
-       theme="dark"
-      /> */}
     </div>
   );
 };
