@@ -14,7 +14,7 @@ import { BiSupport } from "react-icons/bi";
 const Footer = () => {
   return (
     <div className="bg-black text-[#aaa9a9] py-20 font-titleFont">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-4">
+      <div className="max-w-screen-xl mx-auto grid gap-5 px-5 sm:grid-cols-2 lg:grid-cols-4">
         {/* ---------LOGOICON START------------- */}
         <div className="flex flex-col gap-6">
           <img className=" w-32" src={mainLogo} alt="mainLogoImg" />
@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
         {/* ---------PROFILE END---------------- */}
         {/* ---------SUBCRIBE START------------- */}
-        <div className="flex items-center">
+        <div className="flex items-center ">
           <input type="email" placeholder="e-mail" 
           className=" bg-transparent border w-[270px] h-10 px-2 text-sm"/>
           <button className="w-[180px] h-10 px-2 text-start text-sm text-white border hover:bg-gray-600 active:bg-white active:text-black  ">Subscribe</button>
