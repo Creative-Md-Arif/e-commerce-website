@@ -23,10 +23,10 @@ const nextSlide=()=>{
     
   return (
 
-         <div className=" w-full h-auto  overflow-x-hidden">
-            <div className=" w-screen h-[650px] relative">
+         <div className=" w-full h-auto overflow-x-hidden">
+            <div className=" w-screen max-h-[140px] bg-center bg-cover sm:max-h-[220px] md:max-h-[280px] lg:max-h-[400px] xl:max-h-[500px] 2xl:max-h-[650px] relative ">
                 <div style={{ transform: `translateX(-${currentSlide * 100}vw)`}}
-                   className=" w-[400vw] h-full flex transition-transform duration-1000">
+                   className=" w-[400vw] h-full flex transition-transform duration-1000 ">
                     <img className=" w-screen h-full object-cover"
                     src={data[0]} alt="ImgOne"
                     loading="priority"
@@ -47,11 +47,11 @@ const nextSlide=()=>{
                     loading="priority"
                     />
                 </div>
-                <div className=" absolute w-fit left-0 right-0 mx-auto flex gap-8 bottom-44">
-                    <div onClick={prevSlide} className="  w-14 h-12 border-[1px] border-black flex items-center justify-center hover:cursor-pointer hover:bg-slate-700 hover:text-white active:bg-gray-900 duration-300">
+                <div className=" absolute w-fit left-0 right-0 mx-auto flex gap-8 bottom-2 sm:bottom-3">
+                    <div onClick={prevSlide} className="  lg:w-14 lg:h-12 border-[1px] border-black flex items-center justify-center hover:cursor-pointer hover:bg-slate-700 hover:text-white active:bg-gray-900 duration-300">
                         <GoArrowLeft />
                     </div>
-                    <div onClick={nextSlide}  className=" w-14 h-12 border-[1px] border-black flex items-center justify-center hover:cursor-pointer hover:bg-slate-700 hover:text-white active:bg-gray-900 duration-300">
+                    <div onClick={nextSlide}  className=" lg:w-14 lg:h-12 border-[1px] border-black flex items-center justify-center hover:cursor-pointer hover:bg-slate-700 hover:text-white active:bg-gray-900 duration-300">
                         <GoArrowRight />
                     </div>
                 </div>

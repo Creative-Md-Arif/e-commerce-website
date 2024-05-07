@@ -13,7 +13,7 @@ const Products = ( { products } ) => {
                 <span className=' w-24 h-1 bg-black' ></span>
                 <p className=' w-[720px] text-gray-600 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequuntur nihil officia quaerat esse! Fugit alias facilis unde, voluptates non fuga officiis exercitationem laboriosam enim? Consequuntur culpa optio error provident!</p>
             </div>
-            <div className='max-w-screen-xl mx-auto py-10 grid sm:grid-cols-2 px-6 lg:grid-cols-3 xl:grid-cols-4  gap-10'>
+            <div className='max-w-screen-xl mx-auto py-10 grid sm:grid-cols-2 px-5 lg:grid-cols-3 xl:grid-cols-4  gap-10'>
              {
                 // eslint-disable-next-line react/prop-types, no-unused-vars
                 products.map( (item) => (
